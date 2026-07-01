@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const pingsSchema = new Schema({
   monitorId: {
-    type: Schema.type.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'Monitors',
     required: true,
   },
@@ -10,7 +10,7 @@ const pingsSchema = new Schema({
     type: String,
     enum: ['up', 'down'],
   },
-  responsetime: { type: Number },
+  responseTime: { type: Number },
   statusCode: { type: Number },
   error: { type: String },
 }, { timestamps: true });
